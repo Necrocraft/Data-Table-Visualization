@@ -68,10 +68,11 @@ function DataTable(props) {
 
   const handleClick = (id) => {
     console.log(id);
-    let randomArray = generate(100, 8);
+    let randomArray = generate(100, columns.length);
+    //Generating a random array that will sum to 100 and number of values inside will be equal to length of original column
     console.log(randomArray);
-    let prop = columns[id];
-    let valueArray = [...data].map((d, i) => ({...d, [prop]: randomArray[i]}));
+    let valueArray = [...data].map((d, i) => ({...d, [columns[id]]: randomArray[i]}));
+    //Plotting the random array on the original data array at the given index from id and then setting that array to data
     setData(valueArray);
     console.log(valueArray);
   }
