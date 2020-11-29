@@ -1,0 +1,41 @@
+.table {
+    background-color: #7ed6df;
+    padding: 1rem;
+    border-radius: 20px;
+    box-shadow: 0 0 8px -4px rgba(0, 0, 0, 2);
+}
+
+.input {
+    max-width: 2rem;
+    border: none;
+    color: "#595959";
+    border-bottom: 1px solid;
+    outline: none;
+    text-align: center;
+}
+
+.column-fixed {
+    background-color: #ff7979;
+}
+
+.total_row {
+    cursor: pointer;
+    background-color: #f7f1e3;
+}
+
+.total {
+    background-color: #eb4d4b;
+}
+
+.total_row:hover {
+    background-color: #95afc0;
+    box-shadow: 0 0 8px -2px rgba(0, 0, 0, 2);
+}
+
+/* To remove the arrows from the input field */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

@@ -1,12 +1,35 @@
-import React from 'react';
+import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
+import thunk from "redux-thunk";
+import { Provider } from "react-redux";
+import { combineReducers, createStore, applyMiddleware } from "redux";
+
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import {TableReducer} from "./reducers/table-reducer";
+
+class Screen extends Component {
+	render() {
+		return (
+			<Provider store={store}>
+				<App />
+			</Provider>
+		);
+	}
+}
+
+const reducers = combineReducers({
+  table_store: TableReducer,
+});
+
+const store = createStore(reducers, applyMiddleware(thunk));
+
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Screen />
   </React.StrictMode>,
   document.getElementById('root')
 );

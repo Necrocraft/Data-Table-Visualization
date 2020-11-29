@@ -1,0 +1,1 @@
+export const CHORD_DATA = "CHORD_DATA";
