@@ -176,7 +176,7 @@ function DataTable(props) {
             <TableRow>
               <TableCell className="total" component="th" scope="row">Total</TableCell>
               {total.map((val, i) => (
-                <TableCell title="Click Me" className="total_row" onClick={() => handleClick(i)} align="center">{val}</TableCell>
+                <TableCell key={i} title="Click Me" className="total_row" onClick={() => handleClick(i)} align="center">{val}</TableCell>
               ))}
             </TableRow>
           </TableBody>
